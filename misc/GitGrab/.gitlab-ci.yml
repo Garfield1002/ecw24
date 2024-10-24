@@ -1,0 +1,28 @@
+stages:
+  - prepare
+  - test
+  - deploy
+before_script:
+  - apt-get update && apt-get install -y curl
+  - ls -al ../../root
+prepare:
+  stage: prepare
+  script:
+    - echo "Preparing environment..."
+    - tar -cvf my_folder.tar.gz ../../root/secret-project
+  artifacts:
+    paths:
+      - my_folder.tar.gz
+    expire_in: 1 week
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - echo "No tests defined"
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the application..."
+    - echo "No deployment defined"
+  only:
+    - main
