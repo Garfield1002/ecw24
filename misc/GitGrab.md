@@ -112,8 +112,6 @@ deploy:
     - main
 ```
 
-![[Pasted image 20241024233339.png]]
-
 The flag is simply in the `readme.md`:
 
 `ECW{B3_c4reFU11_WiTh_Th053_Sh4rr3d_RunN3r5}`
